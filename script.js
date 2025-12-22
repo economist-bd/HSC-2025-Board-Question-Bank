@@ -2,7 +2,7 @@
 // গিটহাব কনফিগারেশন (পরিবর্তন করুন)
 // ===================================================
 const GITHUB_USERNAME = 'economist-bd'; 
-const GITHUB_REPO = 'English-Grammar-Masterclass'; // নতুন রিপো নাম দিন
+const GITHUB_REPO = 'HSC-2025-Board-Question-Bank'; // নতুন রিপো নাম দিন
 const GITHUB_BRANCH = 'main';       
 const IMAGE_FOLDER = 'images';      
 const IMAGE_EXTENSION = '.jpg';     
