@@ -371,7 +371,7 @@ const bookData = [
             <div style="text-align:center;">
                 
 
-[`Image of author`]
+            author
 
                 <h3>মঞ্জুরুল হক</h3>
                 <p>প্রভাষক, অর্থনীতি</p>
