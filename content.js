@@ -387,7 +387,7 @@ const bookData = [
             </div>
         `
     },
-    const bookData = [
+    
     {
         title: "🏠 হোম পেজ (Home)",
         content: `
@@ -644,7 +644,9 @@ const bookData = [
             <div style="text-align:center;">
                 
 
-[Image of author]
+<img src="https://raw.githubusercontent.com/economist-bd/Spoken-English-Book/main/images/author.jpg" 
+                     alt="Author Image" 
+                     style="width:100%; max-width:300px; border-radius:10px; margin: 20px auto; display:block; border: 2px solid #ddd;">
 
                 <h3>মঞ্জুরুল হক</h3>
                 <p>প্রভাষক, অর্থনীতি</p>
