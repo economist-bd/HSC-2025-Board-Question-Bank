@@ -1,5 +1,363 @@
 const bookData = [
     {
+        title: "📌 গাইডলাইন ও সিলেবাস ২০২৬",
+        content: `
+            <div style="text-align:center; padding: 20px;">
+                <h1 style="color:#2E86DE;">এইচএসসি ২০২৬ মিশন</h1>
+                <h3 style="color:#555;">ইংরেজি ১ম ও ২য় পত্র পূর্ণাঙ্গ প্রস্তুতি</h3>
+                <p>টেস্ট পরীক্ষা: জানুয়ারি ২০২৬ | ফাইনাল: জুন ২০২৬</p>
+                
+                <div style="background:#fff3cd; padding:15px; border-radius:10px; margin-top:20px; border:1px solid #ffeeba;">
+                    <strong>🎯 স্ট্র্যাটেজি:</strong> এই ৩০টি চ্যাপ্টারে গ্রামার, প্যাসেজ এবং রাইটিং পার্ট এমনভাবে মিক্স করা হয়েছে যেন একঘেয়েমি না আসে। প্রতিটি চ্যাপ্টার ৩ দিনে শেষ করলে ৩ মাসে পুরো সিলেবাস শেষ হবে।
+                </div>
+
+                <div style="display:grid; grid-template-columns: 1fr 1fr; gap:15px; margin-top:30px;">
+                    <button class="primary-btn" onclick="loadChapterByIndex(1)" style="background:#0984e3;">📘 ১ম পত্র শুরু</button>
+                    <button class="primary-btn" onclick="loadChapterByIndex(11)" style="background:#00b894;">📕 ২য় পত্র শুরু</button>
+                    <button class="primary-btn" onclick="loadChapterByIndex(21)" style="background:#e17055;">✍️ রাইটিং পার্ট</button>
+                    <button class="primary-btn" onclick="loadChapterByIndex(29)" style="background:#6c5ce7;">🏆 মডেল টেস্ট</button>
+                </div>
+            </div>
+        `
+    },
+
+    // ==========================================
+    // পর্ব ১: বেসিক গ্রামার ও টেক্সটবুক (Chapter 1-10)
+    // ==========================================
+    {
+        title: "১. Nelson Mandela & Preposition",
+        content: `
+            <h3>English 1st Paper: Unit-1 (People or Institutions)</h3>
+            <p><strong>Focus:</strong> Nelson Mandela passage. এখান থেকে MCQ এবং Question Answer এর জন্য প্রস্তুতি নিন।</p>
+            <ul>
+                <li>Read the text thoroughly.</li>
+                <li>Key words: Apartheid, Emancipation, Shackles, Reconciliation.</li>
+            </ul>
+
+            <hr>
+            <h3>English 2nd Paper: Preposition</h3>
+            <p>Appropriate Preposition মুখস্থ করার চেয়ে টেক্সট পড়ে প্র্যাকটিস করা ভালো।</p>
+            <div class="rule-box">
+                <strong>Important for 2026:</strong> Board Questions 2022, 2023 & 2024.
+            </div>
+        `
+    },
+    {
+        title: "২. Unforgettable History & Phrases",
+        content: `
+            <h3>1st Paper: The Unforgettable History (7th March Speech)</h3>
+            <p>বঙ্গবন্ধুর ভাষণটি ফ্লো-চার্ট (Flow Chart) এবং সামারি (Summary) এর জন্য খুবই গুরুত্বপূর্ণ।</p>
+            
+
+            <hr>
+            <h3>2nd Paper: Special Uses of Phrases</h3>
+            <p>Was born, Have to, Would rather, Had better, Let alone, As soon as.</p>
+            <p><strong>Practice:</strong> বিগত ৫ বছরের বোর্ড প্রশ্ন।</p>
+        `
+    },
+    {
+        title: "৩. Dreams & Completing Sentence",
+        content: `
+            <h3>1st Paper: Unit-3 (Dreams)</h3>
+            <p>Dreams have fascinated philosophers... এই প্যাসেজটি এবং 'I have a dream' (Martin Luther King) প্যাসেজটি গুরুত্বপূর্ণ।</p>
+
+            <hr>
+            <h3>2nd Paper: Completing Sentence</h3>
+            <p>Conditional Sentence (If), So that, It is time, Since, Though/Although এর নিয়মগুলো ঝালিয়ে নিন।</p>
+        `
+    },
+    {
+        title: "৪. Right Form of Verbs (মাস্টারক্লাস)",
+        content: `
+            <h3>2nd Paper: Right Form of Verbs</h3>
+            <p>এটি গ্রামারের মেরুদণ্ড। সাবজেক্ট-ভার্ব এগ্রিমেন্ট এবং টেন্সের ব্যবহার শিখুন।</p>
+            
+            <div class="example-box">
+                <ul>
+                    <li>Universal truth হলে Present Indefinite.</li>
+                    <li>Yesterday, Last night থাকলে Past Indefinite.</li>
+                    <li>Passive Voice এর ব্যবহার খেয়াল রাখতে হবে।</li>
+                </ul>
+            </div>
+        `
+    },
+    {
+        title: "৫. Etiquette & Manners",
+        content: `
+            <h3>1st Paper: Etiquette and Manners</h3>
+            <p>এই প্যাসেজটি 'With Clues' এবং 'Without Clues' এর জন্য হট টপিক।</p>
+            <ul>
+                <li>সামাজিক শিষ্টাচার সম্পর্কিত শব্দগুলো শিখুন।</li>
+                <li>Practice filling gaps regarding social behavior.</li>
+            </ul>
+        `
+    },
+    {
+        title: "৬. Narration (Passage)",
+        content: `
+            <h3>2nd Paper: Narration</h3>
+            <p>Sentence Narration থেকে Passage Narration এ রূপান্তর করার নিয়ম।</p>
+            <p><strong>টিপস:</strong> বক্তা (Speaker) এবং শ্রোতা (Listener) আগে খুঁজে বের করুন। টেন্স পরিবর্তনের চার্ট মনে রাখুন।</p>
+        `
+    },
+    {
+        title: "৭. Adolescence (কৈশোর)",
+        content: `
+            <h3>1st Paper: Adolescence</h3>
+            <p>কৈশোরের সমস্যা এবং সম্ভাবনা নিয়ে প্যাসেজগুলো (Storm and Stress) সামারির জন্য গুরুত্বপূর্ণ।</p>
+            
+        `
+    },
+    {
+        title: "৮. Modifiers (বিশেষন)",
+        content: `
+            <h3>2nd Paper: Modifiers</h3>
+            <p>Noun এর আগে বা পরে বসে তাকে বিশেষায়িত করা।</p>
+            <div class="rule-box">
+                Pre-modifier (Adjective, Participle) এবং Post-modifier (Appositive, Infinitive) এর ব্যবহার শিখুন।
+            </div>
+        `
+    },
+    {
+        title: "৯. Human Rights (Amerigo)",
+        content: `
+            <h3>1st Paper: Amerigo, A Street Child</h3>
+            <p>ফ্লো-চার্টের জন্য 'Amerigo' প্যাসেজটি ২০২৬ সালের জন্য টপ লিস্টে থাকবে।</p>
+            <p><strong>Task:</strong> পথশিশুদের কষ্ট নিয়ে ৫টি পয়েন্ট লেখা প্র্যাকটিস করুন।</p>
+        `
+    },
+    {
+        title: "১০. Connectors (Sentence Linkers)",
+        content: `
+            <h3>2nd Paper: Connectors</h3>
+            <p>বাক্যের মধ্যে সম্পর্ক স্থাপনকারী শব্দ (However, Therefore, Moreover, Thus)।</p>
+            <p><strong>Strategy:</strong> প্যাসেজের বাংলা অর্থ বুঝলে কানেক্টর বসানো সহজ।</p>
+        `
+    },
+
+    // ==========================================
+    // পর্ব ২: রাইটিং ও অ্যাডভান্সড লার্নিং (Chapter 11-20)
+    // ==========================================
+    {
+        title: "১১. Paragraph Writing (Listing/Description)",
+        content: `
+            <h3>Top Suggestions for 2026</h3>
+            <ul>
+                <li><strong>Price Hike:</strong> নিত্যপণ্যের দাম বৃদ্ধি (সবচেয়ে গুরুত্বপূর্ণ)।</li>
+                <li><strong>Deforestation:</strong> পরিবেশ বিপর্যয়।</li>
+                <li><strong>Environment Pollution:</strong> মাটি, পানি ও বায়ু দূষণ।</li>
+                <li><strong>Road Accident:</strong> কারণ ও প্রতিকার।</li>
+            </ul>
+        `
+    },
+    {
+        title: "১২. Synonym & Antonym",
+        content: `
+            <h3>2nd Paper: Vocabulary</h3>
+            <p>শব্দভাণ্ডার বাড়ানোর কোনো বিকল্প নেই। বোর্ড বইয়ের প্যাসেজগুলোর কঠিন শব্দের অর্থ শিখুন।</p>
+            <p><strong>Tip:</strong> সাফিক্স-প্রিফিক্স ব্যবহার করে পার্টস অফ স্পিচ পরিবর্তন করা শিখুন।</p>
+        `
+    },
+    {
+        title: "১৩. Environment & Nature (Hakaluki Haor)",
+        content: `
+            <h3>1st Paper: Hakaluki Haor / Kuakata</h3>
+            <p>প্রকৃতি বিষয়ক প্যাসেজ। কুয়াকাটা বা হাকালুকি হাওর থেকে তথ্য নিয়ে টেবিল পূরণ করা বা প্রশ্ন উত্তর।</p>
+            
+        `
+    },
+    {
+        title: "১৪. Graph & Chart Writing",
+        content: `
+            <h3>1st Paper: Data Interpretation</h3>
+            <p>গ্রাফ বা পাই চার্ট দেখে নিজের ভাষায় বর্ণনা করা।</p>
+            <ul>
+                <li>Internet Users in Bangladesh.</li>
+                <li>Number of people living below the poverty line.</li>
+                <li>Literacy Rate over the years.</li>
+            </ul>
+            
+
+[Image of pie_chart_example]
+
+        `
+    },
+    {
+        title: "১৫. Punctuation Marks",
+        content: `
+            <h3>2nd Paper: Punctuation</h3>
+            <p>দাড়ি, কমা, ইনভার্টেড কমার সঠিক ব্যবহার। বিশেষ করে ডায়ালগ আকারে থাকলে কোথায় থামতে হবে তা বোঝা।</p>
+        `
+    },
+    {
+        title: "১৬. Completing Story (গল্প লিখন)",
+        content: `
+            <h3>Creative Writing</h3>
+            <p>ঐতিহ্যবাহী গল্পের পাশাপাশি কাল্পনিক গল্প আসতে পারে।</p>
+            <ul>
+                <li>Sheikh Saadi and his dress.</li>
+                <li>A Thirsty Crow.</li>
+                <li>Failure is the pillar of success (Robert Bruce).</li>
+                <li>Grasp all, lose all.</li>
+            </ul>
+        `
+    },
+    {
+        title: "১৭. Education & Technology",
+        content: `
+            <h3>1st Paper: Unit-12 (Education and Life)</h3>
+            <p>শিক্ষা এবং প্রযুক্তির সম্পর্ক। অনলাইন এডুকেশন বা ডিস্টেন্স লার্নিং নিয়ে ক্লোজ টেস্ট আসতে পারে।</p>
+        `
+    },
+    {
+        title: "১৮. Informal Letter / Email",
+        content: `
+            <h3>1st Paper Writing</h3>
+            <p><strong>Email Suggestion:</strong></p>
+            <ul>
+                <li>Thanking for hospitality.</li>
+                <li>Preparation for HSC exam.</li>
+                <li>Bad effects of smoking/drug addiction.</li>
+                <li>Inviting to a picnic/marriage ceremony.</li>
+            </ul>
+        `
+    },
+    {
+        title: "১৯. Formal Letter / Application",
+        content: `
+            <h3>2nd Paper Writing</h3>
+            <p>কলেজ অধ্যক্ষের কাছে আবেদন।</p>
+            <ul>
+                <li>Setting up a Computer Club/Debating Club.</li>
+                <li>Seat in the college hostel.</li>
+                <li>Permission for a study tour.</li>
+                <li>Multimedia Classroom facilities.</li>
+            </ul>
+        `
+    },
+    {
+        title: "২০. Myths and Literature",
+        content: `
+            <h3>1st Paper: Literary Passages</h3>
+            <p>গাজি পীর (Gazi Pir) বা হারকিউলিস (Hercules) এর প্যাসেজ। এগুলো রি-অ্যারেঞ্জ (Rearrange) এর জন্য গুরুত্বপূর্ণ।</p>
+        `
+    },
+
+    // ==========================================
+    // পর্ব ৩: রিভিশন ও ফাইনাল সাজেশন (Chapter 21-30)
+    // ==========================================
+    {
+        title: "২১. Comparison Paragraphs",
+        content: `
+            <h3>2nd Paper Paragraph (Comparison/Cause-Effect)</h3>
+            <ul>
+                <li><strong>City Life vs Village Life:</strong> সুবিধা ও অসুবিধা।</li>
+                <li><strong>Online Class vs Offline Class:</strong> পার্থক্য।</li>
+                <li><strong>Climate Change:</strong> কারণ ও ফলাফল।</li>
+            </ul>
+        `
+    },
+    {
+        title: "২২. Cloze Test with Clues",
+        content: `
+            <h3>1st Paper Gap Filling</h3>
+            <p>বক্সের শব্দ দিয়ে শূন্যস্থান পূরণ। এটি পারার জন্য গ্রামার (Preposition, Article) এবং ভোকাবুলারি দুটোই লাগে।</p>
+            <p><strong>Practice:</strong> সকল বোর্ডের ২০১৯, ২০২২, ২০২৩ সালের প্রশ্ন।</p>
+        `
+    },
+    {
+        title: "২৩. Cloze Test without Clues",
+        content: `
+            <h3>1st Paper: The Challenge</h3>
+            <p>কোনো ক্লু ছাড়া শব্দ বসানো। টেক্সটবুক ভালো করে পড়া থাকলে এটি সহজ। সাধারণত সায়েন্স, টেকনোলজি বা ইতিহাস থেকে আসে।</p>
+        `
+    },
+    {
+        title: "২৪. Rearranging Sentences",
+        content: `
+            <h3>1st Paper: Story Ordering</h3>
+            <p>১০টি বাক্য এলোমেলো থাকবে, সাজিয়ে লিখতে হবে।</p>
+            <p><strong>Topics:</strong> Famous persons (Rabindranath, Nazrul, Mandela, Einstein) or Moral Stories.</p>
+        `
+    },
+    {
+        title: "২৫. Report Writing",
+        content: `
+            <h3>2nd Paper: Report for Newspaper</h3>
+            <p>পত্রিকার সাংবাদিক হিসেবে রিপোর্ট লেখা।</p>
+            <ul>
+                <li>Fire accident in a garment factory.</li>
+                <li>Price hike of essential commodities.</li>
+                <li>Observation of Ekushey February/Victory Day in college.</li>
+                <li>Road accident you witnessed.</li>
+            </ul>
+        `
+    },
+    {
+        title: "২৬. Theme Writing (কবিতা)",
+        content: `
+            <h3>1st Paper: Poem Appreciation</h3>
+            <p>টেক্সটবুকের কবিতাগুলোর মূলভাব (Theme) লেখা।</p>
+            <ul>
+                <li>I will arise and go now (Innisfree).</li>
+                <li>Fair Daffodils.</li>
+                <li>Hold fast to dreams.</li>
+                <li>Under the greenwood tree.</li>
+            </ul>
+        `
+    },
+    {
+        title: "২৭. স্পেশাল টিপস: ১",
+        content: `
+            <h2>পরীক্ষার খাতা সাজানোর নিয়ম</h2>
+            <ul>
+                <li>মার্জিন টানবেন (উপরে ও বামে)।</li>
+                <li>Question No এর নিচে নীল কালি দিয়ে দাগ দিবেন।</li>
+                <li>কাটাকাটি হলে এক টানে কাটবেন।</li>
+                <li>প্যারাগ্রাফ বা কম্পোজিশন নতুন পৃষ্ঠা থেকে শুরু করবেন।</li>
+            </ul>
+        `
+    },
+    {
+        title: "২৮. স্পেশাল টিপস: ২",
+        content: `
+            <h2>টাইম ম্যানেজমেন্ট (৩ ঘণ্টা)</h2>
+            <p><strong>১ম পত্র:</strong> প্যাসেজ পড়তে সময় বেশি যায়। তাই রাইটিং পার্ট আগে শেষ করে ফেললে ভালো।</p>
+            <p><strong>২য় পত্র:</strong> গ্রামার অংশে ৩০ মিনিটের বেশি সময় দিবেন না। রাইটিং অংশে বেশি সময় রাখুন কারণ সেখানে ৪০ নম্বর।</p>
+        `
+    },
+    {
+        title: "২৯. 🔥 ফাইনাল মডেল টেস্ট (১ম পত্র)",
+        content: `
+            <h3>নিজে নিজে পরীক্ষা দিন</h3>
+            <p><strong>সময়: ৩ ঘণ্টা | পূর্ণমান: ১০০</strong></p>
+            <ol>
+                <li>Reading Passage: Nelson Mandela (MCQ & QA).</li>
+                <li>Flow Chart: 7th March Speech.</li>
+                <li>Summary: Adolescence.</li>
+                <li>Cloze Test: Etiquette.</li>
+                <li>Paragraph: Price Hike.</li>
+                <li>Story: Honest Woodcutter.</li>
+                <li>Email: Preparation for exam.</li>
+            </ol>
+        `
+    },
+    {
+        title: "৩০. 🔥 ফাইনাল মডেল টেস্ট (২য় পত্র)",
+        content: `
+            <h3>নিজে নিজে পরীক্ষা দিন</h3>
+            <p><strong>সময়: ৩ ঘণ্টা | পূর্ণমান: ১০০</strong></p>
+            <ol>
+                <li>Grammar Items (60 Marks): Preposition to Punctuation.</li>
+                <li>Application: For a seat in the hostel.</li>
+                <li>Report: Road Accident.</li>
+                <li>Paragraph: Climate Change.</li>
+                <li>Composition: Wonders of Modern Science.</li>
+            </ol>
+            <p style="text-align:center; color:green; font-weight:bold;">শুভকামনা আপনার পরীক্ষার জন্য!</p>
+        `
+    },
+    {
         title: "🏠 হোম ও বোর্ড নির্বাচন (Home)",
         content: `
             <div style="text-align:center; padding: 20px; font-family: 'Hind Siliguri', sans-serif;">
